@@ -1,0 +1,49 @@
+/* -----------------------StyreneA Fonts--------------------------- */
+@font-face {
+  font-family: 'StyreneA-Black';
+  src: url('../fonts/StyreneA/StyreneA-Black.ttf');
+}
+@font-face {
+  font-family: 'StyreneA-BlackItalic';
+  src: url('../fonts/StyreneA/StyreneA-BlackItalic.ttf');
+}
+@font-face {
+  font-family: 'StyreneA-Bold';
+  src: url('../fonts/StyreneA/StyreneA-Bold.ttf');
+}
+@font-face {
+  font-family: 'StyreneA-BoldItalic';
+  src: url('../fonts/StyreneA/StyreneA-BoldItalic.ttf');
+}
+@font-face {
+  font-family: 'StyreneA-Italic';
+  src: url('../fonts/StyreneA/StyreneA-Italic.ttf');
+}
+@font-face {
+  font-family: 'StyreneA-Light';
+  src: url('../fonts/StyreneA/StyreneA-Light.ttf');
+}
+@font-face {
+  font-family: 'StyreneA-LightItalic';
+  src: url('../fonts/StyreneA/StyreneA-LightItalic.ttf');
+}
+@font-face {
+  font-family: 'StyreneA-Medium';
+  src: url('../fonts/StyreneA/StyreneA-Medium.ttf');
+}
+@font-face {
+  font-family: 'StyreneA-MediumItalic';
+  src: url('../fonts/StyreneA/StyreneA-MediumItalic.ttf');
+}
+@font-face {
+  font-family: 'StyreneA-Regular';
+  src: url('../fonts/StyreneA/StyreneA-Regular.ttf');
+}
+@font-face {
+  font-family: 'StyreneA-Thin';
+  src: url('../fonts/StyreneA/StyreneA-Thin.ttf');
+}
+@font-face {
+  font-family: 'StyreneA-ThinItalic';
+  src: url('../fonts/StyreneA/StyreneA-ThinItalic.ttf');
+}
