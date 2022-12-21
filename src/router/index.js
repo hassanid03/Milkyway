@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue';
 import Goals from '../views/GoalsView.vue';
 import Careers from '../views/CareersView.vue';
 import Trips from '../views/TripsView.vue';
+import LegalNotice from '../views/LegalNotice.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/trips',
       name: 'Trips',
       component: Trips,
+    },
+    {
+      path: '/legalnotice',
+      name: 'Legal Notice',
+      component: LegalNotice,
     },
   ],
 });
