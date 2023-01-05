@@ -4,11 +4,13 @@ module.exports = {
   content: [
     './index.html',
     './src/**/*.{vue,js,ts,jsx,tsx}',
-    './node_modules/tw-elements/dist/js/**/*.js',
+    './node_modules/vue-tailwind-datepicker/**/*.js',
   ],
   theme: {
     extend: {},
     colors: {
+      'vtd-primary': colors.sky, // Light mode Datepicker color
+      'vtd-secondary': colors.gray, // Dark mode Datepicker color
       gray: colors.gray,
       black: colors.black,
       white: colors.white,
@@ -45,5 +47,5 @@ module.exports = {
       thinItalic: ['StyreneA-ThinItalic'],
     },
   },
-  plugins: [require('tw-elements/dist/plugin')],
+  plugins: [require('tw-elements/dist/plugin', '@tailwindcss/forms')],
 };

@@ -34,6 +34,7 @@
           </div>
         </div>
       </nav>
+
       <div class="">
         <div class="flex">
           <div class="xl:mt-24 earth">
@@ -238,6 +239,7 @@
         </div>
       </div>
     </div>
+
     <div class="">
       <div class="bgFooter uppercase">
         <div class="flex justify-center mx-64">
@@ -413,13 +415,13 @@
     <div class="">
       <p class="text-white uppercase xl:mx-80 xl:text-4xl" style="">News</p>
       <div class="flex overflow-y-auto pb-10 no-scrollbar relative">
-        <div class="flex flex-nowrap" style="transform: translate(-25%)">
+        <div class="flex flex-nowrap">
           <div class="flex mt-4 relative mx-2">
             <div
               class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
               style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
             >
-              <img src="/images/rocket.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
+              <img src="/images/2.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
               <p
                 class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
               >
@@ -441,7 +443,16 @@
               class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
               style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
             >
-              <img src="/images/rocket.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
+              <video
+                controls
+                autoplay
+                loop
+                muted
+                class="rounded-tl-[10px] rounded-br-[10px]"
+                width="100%"
+              >
+                <source src="/images/Rakete.mp4" />
+              </video>
               <p
                 class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
               >
@@ -463,7 +474,7 @@
               class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
               style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
             >
-              <img src="/images/rocket.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
+              <img src="/images/3.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
               <p
                 class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
               >
@@ -485,7 +496,7 @@
               class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
               style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
             >
-              <img src="/images/rocket.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
+              <img src="/images/1.png" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
               <p
                 class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
               >
@@ -503,226 +514,7 @@
                 Show
               </button>
             </div>
-            <div
-              class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
-              style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
-            >
-              <img src="/images/rocket.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
-              <p
-                class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
-              >
-                Title
-              </p>
-              <p class="text-skyblue text-sm xl:mx-2">Lorem ipsum dolor sit amet</p>
-              <p class="text-xs mx-1 text-white xl:mx-2 text-justify xl:mt-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no
-              </p>
-              <button
-                class="flex justify-center xl:mb-2 xl:mx-auto bg-gradient-to-l from-skyblue to-skyblues xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
-              >
-                Show
-              </button>
-            </div>
-            <div
-              class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
-              style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
-            >
-              <img src="/images/rocket.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
-              <p
-                class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
-              >
-                Title
-              </p>
-              <p class="text-skyblue text-sm xl:mx-2">Lorem ipsum dolor sit amet</p>
-              <p class="text-xs mx-1 text-white xl:mx-2 text-justify xl:mt-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no
-              </p>
-              <button
-                class="flex justify-center xl:mb-2 xl:mx-auto bg-gradient-to-l from-skyblue to-skyblues xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
-              >
-                Show
-              </button>
-            </div>
-            <div
-              class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
-              style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
-            >
-              <img src="/images/rocket.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
-              <p
-                class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
-              >
-                Title
-              </p>
-              <p class="text-skyblue text-sm xl:mx-2">Lorem ipsum dolor sit amet</p>
-              <p class="text-xs mx-1 text-white xl:mx-2 text-justify xl:mt-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no
-              </p>
-              <button
-                class="flex justify-center xl:mb-2 xl:mx-auto bg-gradient-to-l from-skyblue to-skyblues xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
-              >
-                Show
-              </button>
-            </div>
-            <div
-              class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
-              style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
-            >
-              <img src="/images/rocket.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
-              <p
-                class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
-              >
-                Title
-              </p>
-              <p class="text-skyblue text-sm xl:mx-2">Lorem ipsum dolor sit amet</p>
-              <p class="text-xs mx-1 text-white xl:mx-2 text-justify xl:mt-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no
-              </p>
-              <button
-                class="flex justify-center xl:mb-2 xl:mx-auto bg-gradient-to-l from-skyblue to-skyblues xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
-              >
-                Show
-              </button>
-            </div>
-            <div
-              class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
-              style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
-            >
-              <img src="/images/rocket.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
-              <p
-                class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
-              >
-                Title
-              </p>
-              <p class="text-skyblue text-sm xl:mx-2">Lorem ipsum dolor sit amet</p>
-              <p class="text-xs mx-1 text-white xl:mx-2 text-justify xl:mt-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no
-              </p>
-              <button
-                class="flex justify-center xl:mb-2 xl:mx-auto bg-gradient-to-l from-skyblue to-skyblues xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
-              >
-                Show
-              </button>
-            </div>
-            <div
-              class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
-              style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
-            >
-              <img src="/images/rocket.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
-              <p
-                class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
-              >
-                Title
-              </p>
-              <p class="text-skyblue text-sm xl:mx-2">Lorem ipsum dolor sit amet</p>
-              <p class="text-xs mx-1 text-white xl:mx-2 text-justify xl:mt-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no
-              </p>
-              <button
-                class="flex justify-center xl:mb-2 xl:mx-auto bg-gradient-to-l from-skyblue to-skyblues xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
-              >
-                Show
-              </button>
-            </div>
-            <div
-              class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
-              style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
-            >
-              <img src="/images/rocket.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
-              <p
-                class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
-              >
-                Title
-              </p>
-              <p class="text-skyblue text-sm xl:mx-2">Lorem ipsum dolor sit amet</p>
-              <p class="text-xs mx-1 text-white xl:mx-2 text-justify xl:mt-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no
-              </p>
-              <button
-                class="flex justify-center xl:mb-2 xl:mx-auto bg-gradient-to-l from-skyblue to-skyblues xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
-              >
-                Show
-              </button>
-            </div>
-            <div
-              class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
-              style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
-            >
-              <img src="/images/rocket.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
-              <p
-                class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
-              >
-                Title
-              </p>
-              <p class="text-skyblue text-sm xl:mx-2">Lorem ipsum dolor sit amet</p>
-              <p class="text-xs mx-1 text-white xl:mx-2 text-justify xl:mt-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no
-              </p>
-              <button
-                class="flex justify-center xl:mb-2 xl:mx-auto bg-gradient-to-l from-skyblue to-skyblues xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
-              >
-                Show
-              </button>
-            </div>
-            <div
-              class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
-              style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
-            >
-              <img src="/images/rocket.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
-              <p
-                class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
-              >
-                Title
-              </p>
-              <p class="text-skyblue text-sm xl:mx-2">Lorem ipsum dolor sit amet</p>
-              <p class="text-xs mx-1 text-white xl:mx-2 text-justify xl:mt-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no
-              </p>
-              <button
-                class="flex justify-center xl:mb-2 xl:mx-auto bg-gradient-to-l from-skyblue to-skyblues xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
-              >
-                Show
-              </button>
-            </div>
-            <div
-              class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
-              style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
-            >
-              <img src="/images/rocket.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
-              <p
-                class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
-              >
-                Title
-              </p>
-              <p class="text-skyblue text-sm xl:mx-2">Lorem ipsum dolor sit amet</p>
-              <p class="text-xs mx-1 text-white xl:mx-2 text-justify xl:mt-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no
-              </p>
-              <button
-                class="flex justify-center xl:mb-2 xl:mx-auto bg-gradient-to-l from-skyblue to-skyblues xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
-              >
-                Show
-              </button>
-            </div>
+
           </div>
         </div>
       </div>

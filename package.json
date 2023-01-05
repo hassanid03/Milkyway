@@ -10,11 +10,13 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.4.0",
     "axios": "^0.26.1",
-    "flowbite": "^1.5.3",
+    "flowbite": "^1.5.5",
+    "flowbite-datepicker": "^1.2.2",
     "pinia": "^2.0.14",
-    "tw-elements": "^1.0.0-alpha12",
+    "tw-elements": "^1.0.0-alpha13",
     "vue": "^3.2.29",
     "vue-router": "^4.0.12",
+    "vue-tailwind-datepicker": "^1.2.6",
     "vue-timer-hook": "^1.0.11"
   },
   "devDependencies": {
