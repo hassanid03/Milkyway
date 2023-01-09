@@ -164,16 +164,18 @@
                 class="rounded-tl-[10px] autoPlay rounded-br-[10px] position"
                 style="height: 270px; width: 100%"
               /> -->
-              <video
-                controls
-                autoplay
-                loop
-                muted
-                class="rounded-tl-[10px] rounded-br-[10px]"
-                width="100%"
-              >
-                <source src="/images/Rakete.mp4" />
-              </video>
+              <div style="height: 267px">
+                <iframe
+                  src="/images/Rakete.mp4"
+                  controls
+                  autoplay
+                  loop
+                  muted
+                  class="rounded-tl-[10px] h-full rounded-br-[10px]"
+                  width="100%"
+                >
+                </iframe>
+              </div>
               <p
                 class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
               >
@@ -443,16 +445,18 @@
               class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
               style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
             >
-              <video
-                controls
-                autoplay
-                loop
-                muted
-                class="rounded-tl-[10px] rounded-br-[10px]"
-                width="100%"
-              >
-                <source src="/images/Rakete.mp4" />
-              </video>
+              <div style="height: 267px">
+                <iframe
+                  src="/images/Rakete.mp4"
+                  controls
+                  autoplay
+                  loop
+                  muted
+                  class="rounded-tl-[10px] h-full rounded-br-[10px]"
+                  width="100%"
+                >
+                </iframe>
+              </div>
               <p
                 class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
               >
@@ -514,7 +518,6 @@
                 Show
               </button>
             </div>
-
           </div>
         </div>
       </div>

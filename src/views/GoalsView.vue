@@ -1,31 +1,57 @@
 <template>
-  <div class="bg-black h-80">
-    <NavbarComp></NavbarComp>
-    <div class="text-white text-3xl font-black mt-10 mb-3 text-center">Nothing Here</div>
-  </div>
-  <!-- <div class="inline-block relative w-64">
-    <select
-      class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-    >
-      <option>Really long option that will likely overlap the chevron</option>
-      <option>Option 2</option>
-      <option>Option 3</option>
-    </select>
-    <div
-      class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-    >
-      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-      </svg>
+  <div style="background-image: linear-gradient(#27262d, #56555a, #394d53)">
+    <div class="bgPage1">
+      <NavbarComp></NavbarComp>
+      <div class="text-white text-3xl font-black mt-10 mb-3 text-center">Nothing Here</div>
     </div>
-  </div> -->
+    <div class="mt-96">
+      <div class="bgFooter uppercase">
+        <div class="flex justify-center mx-64">
+          <div class="">
+            <img src="/images/logo.png " class="w-36 xl:mt-9 xl:mb-10" alt="" />
+          </div>
+          <div class="flex mx-auto flex-col xl:mt-12 upeprcase text-white">
+            <div><p class="text-orange text-sm font-regular">QUICK LINKS</p></div>
+            <div>
+              <p class="text-xs">
+                LEGAL NOTICE <br />
+                TRIPS <br />
+                STORE <br />
+                CAREERS <br />
+                GOALS
+              </p>
+            </div>
+          </div>
 
+          <div class="flex flex-col xl:mt-12 upeprcase text-white">
+            <div><p class="text-orange text-sm font-regular">FOLLOW Us</p></div>
+            <div>
+              <p class="text-xs">
+                TWITTER <br />
+                INSTAGRAM <br />
+                FACEBOOK <br />
+                YOUTUBE
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="">
+      <div class="bg-black uppercase">
+        <div class="flex justify-center">
+          <p class="text-white text-xs xl:mt-4 xl:mb-4">
+            Danial H. - Daniel D. - Lukas H. - Raphael L.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
 import NavbarComp from '@/components/NavbarComp.vue';
-import { ref } from 'vue';
-
 
 </script>
 
