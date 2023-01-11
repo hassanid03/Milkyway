@@ -252,7 +252,8 @@
             <div><p class="text-orange text-sm font-regular">QUICK LINKS</p></div>
             <div>
               <p class="text-xs">
-                LEGAL NOTICE <br />
+                <RouterLink to="/legalnotice"> LEGAL NOTICE </RouterLink>
+                <br />
                 TRIPS <br />
                 STORE <br />
                 CAREERS <br />
