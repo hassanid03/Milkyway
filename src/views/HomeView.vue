@@ -66,25 +66,21 @@
         </div>
       </div>
     </div>
-    <div class="flex box1 rounded-tl-[15px] rounded-br-[15px]" style="transform: translateY(-20%)">
+    <div
+      class="flex box1 h-auto rounded-tl-[15px] rounded-br-[15px]"
+      style="transform: translateY(-20%)"
+    >
       <div class="flex xl:mt-5 justify-center">
         <div class="flex flex-col">
           <div class="uppercase text-white xl:text-2xl font-regular xl:mx-10">
-            <p>Earth</p>
+            <p>{{ mercury.name }}</p>
           </div>
           <div class="uppercase text-orange xl:text-sm font-regular xl:mx-10">
-            <p>only 3.000.00$</p>
+            <p>{{ mercury.price_per_day }}$ per day</p>
           </div>
           <div>
             <p class="text-justify text-white" style="margin-left: 2.5rem; margin-right: -3rem">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-              invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-              accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-              sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-              aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-              rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-              amet.
+              {{ mercury.description }}
             </p>
           </div>
           <div class="flex xl:mt-3 bg-opacity-75" style="margin-left: 19rem; margin-right: 2rem">
@@ -105,6 +101,7 @@
             <!-- <button @click="show = !show">Click</button> -->
           </div>
           <button
+            style="transform: translate(0%, 40%)"
             class="inline-block rounded-tl-lg rounded-br-lg bg-gradient-to-l from-orange to-oranges xl:mx-10 xl:mt-1 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase"
           >
             Book now
@@ -117,7 +114,6 @@
           class="xl:mt-8 ani"
           alt="Earth"
           style="
-            transform:translate(28%,-40%)
             width: 320px;
             margin-left: 0.1rem;
             margin-right: 20rem;
@@ -358,21 +354,14 @@
       <div class="flex xl:mt-5 justify-center">
         <div class="flex flex-col">
           <div class="uppercase text-white xl:text-2xl font-regular xl:mx-10">
-            <p>Earth</p>
+            <p>{{ earth.name }}</p>
           </div>
           <div class="uppercase text-skyblue xl:text-sm font-regular xl:mx-10">
-            <p>only 3.000.00$</p>
+            <p>{{ earth.price_per_day }} per day $</p>
           </div>
           <div>
             <p class="text-justify text-white" style="margin-left: 2.5rem; margin-right: -3rem">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-              invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-              accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-              sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-              aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-              rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-              amet.
+              {{ earth.description }}
             </p>
           </div>
           <div class="flex xl:mt-3 bg-opacity-75" style="margin-left: 19rem; margin-right: 2rem">
@@ -572,8 +561,21 @@
 <script setup>
 import CounterCopm from '../components/CounterCopm.vue';
 // import NavbarComp from '@/components/NavbarComp.vue';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import { usePlanetStore } from '../stores/planets.js';
 let show = ref(false);
+const earth = ref([]);
+const mercury = ref([]);
+const planetsStore = usePlanetStore();
+
+onMounted(async () => {
+  await planetsStore.getMercury();
+  await planetsStore.getEarth();
+  earth.value = planetsStore.earth;
+  mercury.value = planetsStore.mercury;
+  console.log(earth);
+  console.log(mercury);
+});
 </script>
 
 <style>
