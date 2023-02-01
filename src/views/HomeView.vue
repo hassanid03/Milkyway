@@ -567,12 +567,15 @@ let show = ref(false);
 const earth = ref([]);
 const mercury = ref([]);
 const planetsStore = usePlanetStore();
+const planets = ref([]);
 
 onMounted(async () => {
   await planetsStore.getMercury();
   await planetsStore.getEarth();
+  await planetsStore.getPlanets();
   earth.value = planetsStore.earth;
   mercury.value = planetsStore.mercury;
+  planets.value = planetsStore.planets;
   console.log(earth);
   console.log(mercury);
 });

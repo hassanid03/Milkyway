@@ -5,6 +5,7 @@ export const usePlanetStore = defineStore('planets', {
   state: () => ({
     mercury: [],
     earth: [],
+    planets: [],
   }),
   actions: {
     async getMercury() {
@@ -14,6 +15,10 @@ export const usePlanetStore = defineStore('planets', {
     async getEarth() {
       const { data } = await axios.get('http://localhost:3000/milkyway/planets/2');
       this.earth = data;
+    },
+    async getPlanets() {
+      const { data } = await axios.get('http://localhost:3000/milkyway/planets');
+      this.planets = data;
     },
   },
   getters: {},
