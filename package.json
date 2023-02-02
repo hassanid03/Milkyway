@@ -12,12 +12,20 @@
     "axios": "^0.26.1",
     "flowbite": "^1.5.5",
     "flowbite-datepicker": "^1.2.2",
+    "jquery": "^3.6.3",
     "pinia": "^2.0.14",
+    "react-tinder-card": "^1.6.2",
+    "swiper": "^8.4.6",
     "tw-elements": "^1.0.0-alpha13",
     "vue": "^3.2.29",
+    "vue-cal": "^4.8.1",
     "vue-router": "^4.0.12",
+    "vue-swing": "0.0.10",
+    "vue-swipy": "^0.1.1",
     "vue-tailwind-datepicker": "^1.2.6",
-    "vue-timer-hook": "^1.0.11"
+    "vue-timer-hook": "^1.0.11",
+    "vue-tinder": "^2.0.3",
+    "vue2-interact": "0.0.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.4",

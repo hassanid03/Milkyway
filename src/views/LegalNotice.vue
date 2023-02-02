@@ -2,8 +2,8 @@
   <div class="bg-transparent" style="background-image: linear-gradient(#27262d, #56555a, #394d53)">
     <!--Header-->
     <div class="bgPageImp">
-      <nav class="sm:px-4 py-2.5 text-white md:text-xs md:font-regular">
-        <div class="container flex flex-wrap justify-between items-center mx-7">
+      <nav class="sm:px-4 py-2.5 text-white md:text-xs md:font-regular container">
+        <div class="flex flex-wrap justify-between items-center mx-7">
           <div class="md:order-2">SHOP</div>
           <div
             active
@@ -36,78 +36,100 @@
         </div>
       </nav>
       <!--Body-->
-      <div class="flex">
-        <div class="flex-none w-1/6"></div>
-        <div class="flex-none w-4/6">
-          <div class="flex">
-            <div class="flex-none w-1/2">
-              <p class="text-orange text-2xl uppercase font-regular pt-6">About</p>
-              <h1 class="text-white text-6xl uppercase font-regular pt-6">Milkyway</h1>
-              <p class="text-orange text-xl uppercase font-regular pt-3">Impressum</p>
-              <p class="text-white text-lg pt-3">
+      <div class="flex justify-center">
+        <div class="">
+          <div class="flex mt-3">
+            <div class="ml-40">
+              <!-- <p class="text-orange text-2xl uppercase font-regular">About</p>
+              <h1 class="text-white text-6xl uppercase font-regular">Milkyway</h1>
+              <p class="text-orange text-xl uppercase font-regular">Impressum</p>
+              <p class="text-white text-lg">
                 Let us discover the future together and join our team on their long journey.
               </p>
-              <p class="text-white text-lg pt-16">
+              <p class="text-white text-lg mt-5">
                 Informationsverwaltendewissensgebendeauskunftspflicht according to
                 §567.46-nartDigi6(6)7 Interstellar-Commerce Law, §72-MyWy Unternehmensgesetzbuch, §0
                 Gewerbeordnung and Offenlegungspflicht according to §25 Mediengesetz.
               </p>
-              <p class="text-white text-lg pt-10">Milkyway AG</p>
+              <p class="text-white text-lg">Milkyway AG</p>
               <p class="text-white text-lg">Mμsterstresse 7, Staircase 69, Door 0,</p>
               <p class="text-white text-lg">75008 Mμster-Σst</p>
               <p class="text-white text-lg">Parys</p>
-              <p class="text-white text-lg">MyWy-113</p>
+              <p class="text-white text-lg">MyWy-113</p> -->
+              <p class="text-orange text-xl uppercase mt-7">About</p>
+              <p class="text-white text-5xl mt-5 uppercase font-medium">Milkyway</p>
+              <p class="text-orange text-xl uppercase">Impressum</p>
+              <p class="text-white text-lg">
+                Let us discover the future together and join our team on their long journey.
+              </p>
+              <p class="text-white text-lg mt-12">
+                Informationsverwaltendewissensgebendeauskunftspflicht according to
+                §567.46-nartDigi6(6)7 Interstellar-Commerce Law, §72-MyWy Unternehmensgesetzbuch, §0
+                Gewerbeordnung and Offenlegungspflicht according to §25 Mediengesetz.
+              </p>
+
+              <p class="text-white text-lg mt-12">
+                Milkyway AG <br />
+                Mμsterstresse 7, Staircase 69, Door 0,<br />
+                75008 Mμster-Σst Parys MyWy-113
+              </p>
             </div>
-            <div class="flex-none w-1/2">
-              <p class="text-white text-lg pt-60">Object: Space Travel</p>
-              <p class="text-white text-lg">UID-Number: PYU124869078</p>
-              <p class="text-white text-lg">GLM: 5966946593659</p>
-              <p class="text-white text-lg">GYSA: 05670648</p>
-              <p class="text-white text-lg">Registration Number: 31102047</p>
-              <p class="text-white text-lg">Commercial Registry: Mμster-Σst</p>
-              <p class="text-white text-lg">Office: 75008 Mμster-Σst</p>
+            <div class="ml-28" style="margin-top: 162px; margin-right: 490px">
+              <div class="w-96" style="width: 530px">
+                <p class="text-white text-lg">Object: Space Travel</p>
+                <p class="text-white text-lg">UID-Number: PYU124869078</p>
+                <p class="text-white text-lg">GLM: 5966946593659</p>
+                <p class="text-white text-lg">GYSA: 05670648</p>
+                <p class="text-white text-lg">Registration Number: 31102047</p>
+                <p class="text-white text-lg">Commercial Registry: Mμster-Σst</p>
+                <p class="text-white text-lg">Office: 75008 Mμster-Σst</p>
+                <p class="text-white text-lg mt-8">Tel.: +69 666 5571720</p>
+                <p class="text-white text-lg">Fax: +69 666 5571720-0</p>
+                <p class="text-white text-lg">
+                  E-Mail: <span class="text-orange">milkyway@spacetravel.com</span>
+                </p>
 
-              <p class="text-white text-lg pt-8">Tel.: +69 666 5571720</p>
-              <p class="text-white text-lg">Fax: +69 666 5571720-0</p>
-              <p class="text-white text-lg">
-                E-Mail: <span class="text-orange">milkyway@spacetravel.com</span>
-              </p>
+                <p class="text-white text-lg mt-4">
+                  Member of: Free-Space-Corporation, Anubis, Est-GmbH
+                </p>
+                <p class="text-white text-lg">
+                  Professional Law: <span class="text-orange"></span> www.under-construction.at
+                </p>
 
-              <p class="text-white text-lg pt-8">
-                Member of: Free-Space-Corporation, Anubis, Est-GmbH
-              </p>
-              <p class="text-white text-lg">
-                Professional Law: <span class="text-orange">www.under-construction.at</span>
-              </p>
+                <p class="text-white text-lg mt-4">
+                  Member of: Free-Space-Corporation, Anubis, Est-GmbH
+                </p>
+                <p class="text-white text-lg">
+                  Professional Law: <span class="text-orange">www.under-construction.at</span>
+                </p>
 
-              <p class="text-white text-lg pt-8">
-                Supervisory Authority: District Court of Mμster-Σst-North
-              </p>
-              <p class="text-white text-lg">
-                Professional Title: Web-Developer, Dream-Engineer, Notarealjober
-              </p>
-              <p class="text-white text-lg">Conferring State: Parys</p>
+                <p class="text-white text-lg mt-4">
+                  Supervisory Authority: District Court of Mμster-Σst-North
+                </p>
+                <p class="text-white text-lg">
+                  Professional Title: Web-Developer, Dream-Engineer, Notarealjober
+                </p>
+                <p class="text-white text-lg">Conferring State: Parys</p>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="flex-none w-1/6"></div>
       </div>
       <!--Body End-->
     </div>
     <!--Header End-->
 
-    <div class="">
-      <p class="text-white uppercase xl:mx-60 text-7xl" style="">Supervisory Board</p>
-      <div class="flex overflow-y-auto pb-10 no-scrollbar relative" style="">
-        <div class="flex flex-nowrap">
+    <div class="mt-16">
+      <p class="text-white uppercase mx-12 font-medium text-5xl">Supervisory Board</p>
+      <div class="flex overflow-y-auto pb-10 no-scrollbar relative">
+        <div class="flex">
           <div class="flex mt-4 relative mx-2">
             <!--Cards-->
             <div
               v-for="(employee, index) in employees"
               :key="index"
-              class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
-              style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 590px"
+              class="w-80 mr-6 rounded-tl-[15px] rounded-br-[15px]"
+              style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 480px"
             >
               <img :src="employee.image" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
               <p class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-white">
@@ -175,18 +197,16 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
 let employees = [
   { name: 'Lukas Hochsteiner', role: 'CHRO', image: '/images/employees/lh.jpg' },
   { name: 'Daniel Diewaldovic', role: 'CEO', image: '/images/employees/dd.jpg' },
-  { name: 'Danial Gamzino', role: 'CFO', image: '/images/employees/dg.jpg' },
+  { name: 'Danial Danialovic', role: 'CFO', image: '/images/employees/dg.jpg' },
   { name: 'Raphael Rosko', role: 'CTO', image: '/images/employees/rr.jpg' },
   { name: 'Eve Rosko', role: 'CMO', image: '/images/employees/er.jpg' },
 ];
 </script>
 
-<style>
+<style scoped>
 /* New (by L.H.) */
 
 .bgPageImp {
@@ -202,7 +222,7 @@ let employees = [
   inset: 0;
   background: black;
   background-image: url('/images/earthbg.jpg');
-  opacity: 10%;
+  opacity: 30%;
   background-repeat: no-repeat;
   background-size: cover;
 }

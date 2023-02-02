@@ -180,7 +180,7 @@
                   v-model="selected"
                   class="font-medium capitalize text-black bg-oranges h-7 rounded-[5px] bordner-none"
                 >
-              
+
                   <option :value="null">number of seats</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
