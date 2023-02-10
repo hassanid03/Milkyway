@@ -74,26 +74,21 @@
         </div>
       </div>
     </div>
-
-    <!-- Karte in der Mitte mit Text und Planet begin -->
-    <div class="flex box1 rounded-tl-[15px] rounded-br-[15px]" style="transform: translateY(-20%)">
+    <div
+      class="flex box1 h-auto rounded-tl-[15px] rounded-br-[15px]"
+      style="transform: translateY(-20%)"
+    >
       <div class="flex xl:mt-5 justify-center">
         <div class="flex flex-col">
           <div class="uppercase text-white xl:text-2xl font-regular xl:mx-10">
-            <p>Mars</p>
+            <p>{{ mercury.name }}</p>
           </div>
           <div class="uppercase text-orange xl:text-sm font-regular xl:mx-10">
-            <p>Yearly Visitors: 12,000,000</p>
+            <p>{{ mercury.price_per_day }}$ per day</p>
           </div>
           <div>
             <p class="text-justify text-white" style="margin-left: 2.5rem; margin-right: -3rem">
-              Halloween Trip through the wasteland of the US: Spooky Scary Skeletons might not be
-              real, but the scary, blood soaked gun laws & bittersweet su(gar)ely sweets definitely
-              are. Gaze upon the high voltage gobbling sparkling light games & the junky messy
-              street food, while you run from house to house, begging for treats and sometimes the
-              mercy of some Karens. Convention Time - Love to talk, meet some freaky freaks & dress
-              up? Visit one of the many conventions on earth. You like video games? Boom! Games Com.
-              We got you! Love animals way too much? Midwest FurFest. Enjoy!
+              {{ mercury.description }}
             </p>
           </div>
 
@@ -122,6 +117,7 @@
           </div>
           <!-- carousel punkte end -->
           <button
+            style="transform: translate(0%, 40%)"
             class="inline-block rounded-tl-lg rounded-br-lg bg-gradient-to-l from-orange to-oranges xl:mx-10 xl:mt-1 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase"
           >
             Book now
@@ -134,7 +130,7 @@
           src="/images/mars.png"
           class="xl:mt-8 ani"
           alt="Earth"
-          style="transform:translate(28%,-40%)
+          style="
             width: 320px;
             margin-left: 0.1rem;
             margin-right: 20rem;
@@ -319,8 +315,24 @@
 import CounterCopm from '../components/CounterCopm.vue';
 // import NavbarComp from '@/components/NavbarComp.vue';
 import Second from '../components/SecondVersionHomeComp.vue';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import { usePlanetStore } from '../stores/planets.js';
 let show = ref(false);
+const earth = ref([]);
+const mercury = ref([]);
+const planetsStore = usePlanetStore();
+const planets = ref([]);
+
+onMounted(async () => {
+  await planetsStore.getMercury();
+  await planetsStore.getEarth();
+  await planetsStore.getPlanets();
+  earth.value = planetsStore.earth;
+  mercury.value = planetsStore.mercury;
+  planets.value = planetsStore.planets;
+  console.log(earth);
+  console.log(mercury);
+});
 </script>
 
 <style>
