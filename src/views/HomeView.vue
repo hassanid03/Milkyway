@@ -1,5 +1,6 @@
 <template>
   <div class="" style="background-image: linear-gradient(#27262d, #56555a, #394d53)" v-if="!show">
+    <!--Section 1-->
     <div class="bgPage1">
       <!-- navbar begin -->
       <nav class="sm:px-4 py-2.5 text-white md:text-xs md:font-regular">
@@ -43,8 +44,9 @@
           <div class="xl:mt-24 earth">
             <!-- <img src="/images/earth.png" class="ear" alt="Earth" style="height: 500px; width: 500px" /> -->
             <div class="circle"></div>
-            <!-- erde mit animation end -->
           </div>
+          <!-- erde mit animation end -->
+          <!-- Short Description Milkyway-->
           <div class="mx-auto mt-10">
             <p class="text-orange xl:font-regular uppercase xl:text-xs">Welcome To</p>
             <p class="uppercase text-white xl:font-medium mt-2 xl:text-4xl">milkyway</p>
@@ -63,6 +65,7 @@
             </div>
             <!-- Coundtdown end -->
           </div>
+          <!-- Short Description Milkyway End-->
           <!-- mond mit animation begin -->
           <div class="">
             <div class="moon xl:mt-5">
@@ -74,6 +77,8 @@
         </div>
       </div>
     </div>
+    <!--Section 1 End-->
+    <!--Section 2-->
     <div
       class="flex box1 h-auto rounded-tl-[15px] rounded-br-[15px]"
       style="transform: translateY(-20%)"
@@ -81,37 +86,37 @@
       <div class="flex xl:mt-5 justify-center">
         <div class="flex flex-col">
           <div class="uppercase text-white xl:text-2xl font-regular xl:mx-10">
-            <p>{{ mercury.name }}</p>
+            <p>{{ currPlanet.name }}</p>
           </div>
           <div class="uppercase text-orange xl:text-sm font-regular xl:mx-10">
-            <p>{{ mercury.price_per_day }}$ per day</p>
+            <p>{{ currPlanet.price_per_day }}$ per day</p>
           </div>
           <div>
             <p class="text-justify text-white" style="margin-left: 2.5rem; margin-right: -3rem">
-              {{ mercury.description }}
+              {{ currPlanet.description }}
             </p>
           </div>
 
           <!-- carousel punkte begin -->
           <div class="flex xl:mt-3 bg-opacity-75" style="margin-left: 19rem; margin-right: 2rem">
-            <img
-              src="/images/circle.png"
-              @click="show = true"
-              class="w-5 border-2 rounded-full border-orange mx-1"
-              alt=""
-            />
+            <div v-for="p in planets" :key="p._id">
+              <img
+                v-if="p.p_id == currPlanet.p_id"
+                src="/images/circle.png"
+                @click="changePlanet(p)"
+                class="w-5 border-2 rounded-full border-orange mx-1"
+                alt=""
+              />
 
-            <img
-              src="/images/circle.png "
-              @click="show = true"
-              class="w-5 hover:bg-orange hover:rounded-full"
-              alt=""
-            />
-
-            <img src="/images/circle.png" class="w-5 rounded-full mx-1" alt="" />
-
-            <img src="/images/circle.png " class="w-5" alt="" />
-            <img src="/images/circle.png" class="w-5 rounded-full mx-1" alt="" />
+              <img
+                v-else
+                :key="p.p_id"
+                src="/images/circle.png "
+                @click="changePlanet(p)"
+                class="w-5 hover:bg-orange hover:rounded-full"
+                alt=""
+              />
+            </div>
 
             <!-- <button @click="show = !show">Click</button> -->
           </div>
@@ -127,7 +132,7 @@
       <!-- Bild von Karte begin -->
       <div>
         <img
-          src="/images/mars.png"
+          :src="`/images/${currPlanet.img}`"
           class="xl:mt-8 ani"
           alt="Earth"
           style="
@@ -149,102 +154,24 @@
         <div class="flex flex-nowrap">
           <div class="flex mt-4 relative mx-2">
             <div
+              v-for="(article, index) in articles"
+              :key="index"
               class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
               style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
             >
-              <img src="/images/2.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
+              <img
+                :src="`/images/${article.image}`"
+                class="rounded-tl-[10px] rounded-br-[10px]"
+                alt=""
+              />
               <p
                 class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
               >
-                Title
+                {{ article.title }}
               </p>
-              <p class="text-orange text-sm xl:mx-2">Lorem ipsum dolor sit amet</p>
+              <p class="text-orange text-sm xl:mx-2">{{ article.introduction }}</p>
               <p class="text-xs mx-1 text-white xl:mx-2 text-justify xl:mt-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no
-              </p>
-              <button
-                class="flex justify-center xl:mb-2 xl:mx-auto bg-gradient-to-l from-orange to-oranges xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
-              >
-                Show
-              </button>
-            </div>
-            <div
-              class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px] overflow-hidden"
-              style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
-            >
-              <!-- <iframe
-                controls
-                src="/images/Rakete.mp4"
-                class="rounded-tl-[10px] autoPlay rounded-br-[10px] position"
-                style="height: 270px; width: 100%"
-              /> -->
-              <div style="height: 267px">
-                <iframe
-                  src="/images/Rakete.mp4"
-                  controls
-                  loop
-                  muted
-                  class="rounded-tl-[10px] h-full rounded-br-[10px]"
-                  width="100%"
-                >
-                </iframe>
-              </div>
-              <p
-                class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
-              >
-                Title
-              </p>
-              <p class="text-orange text-sm xl:mx-2">Lorem ipsum dolor sit amet</p>
-              <p class="text-xs mx-1 text-white xl:mx-2 text-justify xl:mt-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no
-              </p>
-              <button
-                class="flex justify-center xl:mb-2 xl:mx-auto bg-gradient-to-l from-orange to-oranges xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
-              >
-                Show
-              </button>
-            </div>
-            <div
-              class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
-              style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
-            >
-              <img src="/images/3.jpg" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
-              <p
-                class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
-              >
-                Title
-              </p>
-              <p class="text-orange text-sm xl:mx-2">Lorem ipsum dolor sit amet</p>
-              <p class="text-xs mx-1 text-white xl:mx-2 text-justify xl:mt-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no
-              </p>
-              <button
-                class="flex justify-center xl:mb-2 xl:mx-auto bg-gradient-to-l from-orange to-oranges xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
-              >
-                Show
-              </button>
-            </div>
-            <div
-              class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
-              style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
-            >
-              <img src="/images/1.png" class="rounded-tl-[10px] rounded-br-[10px]" alt="" />
-              <p
-                class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
-              >
-                Title
-              </p>
-              <p class="text-orange text-sm xl:mx-2">Lorem ipsum dolor sit amet</p>
-              <p class="text-xs mx-1 text-white xl:mx-2 text-justify xl:mt-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no
+                {{ article.description }}
               </p>
               <button
                 class="flex justify-center xl:mb-2 xl:mx-auto bg-gradient-to-l from-orange to-oranges xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
@@ -318,8 +245,44 @@ import Second from '../components/SecondVersionHomeComp.vue';
 import { ref, onMounted } from 'vue';
 import { usePlanetStore } from '../stores/planets.js';
 let show = ref(false);
-const earth = ref([]);
-const mercury = ref([]);
+const articles = ref([
+  {
+    title: 'MyWy-113 ti',
+    introduction: 'The new MyWy-113 ti makes space-trips into space naps!',
+    description:
+      'Faster, comfier and cheaper. Our new night-jet class rocket offers way more than just a new design and more pillows (and blankets too!). An engine stronger than the atmosphere a red giant bears. Spacier than one of our mid-class hotels and better food served than you can ever dream of at home. And yes we have classified mommy star cooks for you on board. Starting with our new spring season, MyWy-113 ti will journey across the bright and starry universe we know together with you and our amazing team. Not me though.',
+    image: '3.jpg',
+  },
+  {
+    title: 'MyWy-113 ti',
+    introduction: 'The new MyWy-113 ti makes space-trips into space naps!',
+    description:
+      'Faster, comfier and cheaper. Our new night-jet class rocket offers way more than just a new design and more pillows (and blankets too!). An engine stronger than the atmosphere a red giant bears. Spacier than one of our mid-class hotels and better food served than you can ever dream of at home. And yes we have classified mommy star cooks for you on board. Starting with our new spring season, MyWy-113 ti will journey across the bright and starry universe we know together with you and our amazing team. Not me though.',
+    image: '3.jpg',
+  },
+  {
+    title: 'MyWy-113 ti',
+    introduction: 'The new MyWy-113 ti makes space-trips into space naps!',
+    description:
+      'Faster, comfier and cheaper. Our new night-jet class rocket offers way more than just a new design and more pillows (and blankets too!). An engine stronger than the atmosphere a red giant bears. Spacier than one of our mid-class hotels and better food served than you can ever dream of at home. And yes we have classified mommy star cooks for you on board. Starting with our new spring season, MyWy-113 ti will journey across the bright and starry universe we know together with you and our amazing team. Not me though.',
+    image: '3.jpg',
+  },
+  {
+    title: 'MyWy-113 ti',
+    introduction: 'The new MyWy-113 ti makes space-trips into space naps!',
+    description:
+      'Faster, comfier and cheaper. Our new night-jet class rocket offers way more than just a new design and more pillows (and blankets too!). An engine stronger than the atmosphere a red giant bears. Spacier than one of our mid-class hotels and better food served than you can ever dream of at home. And yes we have classified mommy star cooks for you on board. Starting with our new spring season, MyWy-113 ti will journey across the bright and starry universe we know together with you and our amazing team. Not me though.',
+    image: '3.jpg',
+  },
+  {
+    title: 'MyWy-113 ti',
+    introduction: 'The new MyWy-113 ti makes space-trips into space naps!',
+    description:
+      'Faster, comfier and cheaper. Our new night-jet class rocket offers way more than just a new design and more pillows (and blankets too!). An engine stronger than the atmosphere a red giant bears. Spacier than one of our mid-class hotels and better food served than you can ever dream of at home. And yes we have classified mommy star cooks for you on board. Starting with our new spring season, MyWy-113 ti will journey across the bright and starry universe we know together with you and our amazing team. Not me though.',
+    image: '3.jpg',
+  },
+]);
+const currPlanet = ref([]);
 const planetsStore = usePlanetStore();
 const planets = ref([]);
 
@@ -327,12 +290,14 @@ onMounted(async () => {
   await planetsStore.getMercury();
   await planetsStore.getEarth();
   await planetsStore.getPlanets();
-  earth.value = planetsStore.earth;
-  mercury.value = planetsStore.mercury;
   planets.value = planetsStore.planets;
-  console.log(earth);
-  console.log(mercury);
+  currPlanet.value = planetsStore.planets[0];
+  console.log(currPlanet.value);
 });
+
+function changePlanet(planet) {
+  currPlanet.value = planets.value.find((p) => p.p_id == planet.p_id);
+}
 </script>
 
 <style>
