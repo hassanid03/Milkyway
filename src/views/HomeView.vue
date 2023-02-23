@@ -12,24 +12,24 @@
           >
             <RouterLink
               to="/"
-              active-class="block text-orange underline py-2 pr-4 pl-3 rounded md:bg-transparent md:text-blue-700 md:p-0"
+              active-class="block highlight underline py-2 pr-4 pl-3 rounded md:bg-transparent md:text-blue-700 md:p-0"
               >HOME
             </RouterLink>
             <RouterLink
               to="/goals"
-              active-class="block text-orange py-2 pr-4 pl-3 rounded md:hover:bg-transparent underline focus:underline md:hover:text-blue-700 md:p-0"
+              active-class="block highlight py-2 pr-4 pl-3 rounded md:hover:bg-transparent underline focus:underline md:hover:text-blue-700 md:p-0"
             >
               GOALS
             </RouterLink>
             <RouterLink
               to="/careers"
-              active-class="block text-orange py-2 pr-4 pl-3 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+              active-class="block highlight py-2 pr-4 pl-3 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
             >
               CAREERS
             </RouterLink>
             <RouterLink
               to="/trips"
-              active-class="block text-orange py-2 pr-4 pl-3 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+              active-class="block highlight py-2 pr-4 pl-3 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
             >
               TRIPS
             </RouterLink>
@@ -48,7 +48,7 @@
           <!-- erde mit animation end -->
           <!-- Short Description Milkyway-->
           <div class="mx-auto mt-10">
-            <p class="text-orange xl:font-regular uppercase xl:text-xs">Welcome To</p>
+            <p class="highlight xl:font-regular uppercase xl:text-xs">Welcome To</p>
             <p class="uppercase text-white xl:font-medium mt-2 xl:text-4xl">milkyway</p>
             <p class="text-white">
               As the universe expands in a rapid <br />
@@ -56,9 +56,7 @@
               ends of the never-ending space we all call home.
             </p>
 
-            <p class="text-orange xl:font-regular uppercase xl:text-xs xl:mt-5 xl:mx-32">
-              Launch in
-            </p>
+            <p class="highlight xl:font-regular uppercase xl:text-xs xl:mt-5 xl:mx-32">Launch in</p>
             <!-- Coundtdown begin -->
             <div class="xl:ml-36">
               <CounterCopm></CounterCopm>
@@ -88,7 +86,7 @@
           <div class="uppercase text-white xl:text-2xl font-regular xl:mx-10">
             <p>{{ currPlanet.name }}</p>
           </div>
-          <div class="uppercase text-orange xl:text-sm font-regular xl:mx-10">
+          <div class="uppercase highlight xl:text-sm font-regular xl:mx-10">
             <p>{{ currPlanet.price_per_day }}$ per day</p>
           </div>
           <div>
@@ -104,7 +102,7 @@
                 v-if="p.p_id == currPlanet.p_id"
                 src="/images/circle.png"
                 @click="changePlanet(p)"
-                class="w-5 border-2 rounded-full border-orange mx-1"
+                class="w-5 border-2 rounded-full border-highlight mx-1"
                 alt=""
               />
 
@@ -123,7 +121,7 @@
           <!-- carousel punkte end -->
           <button
             style="transform: translate(0%, 40%)"
-            class="inline-block rounded-tl-lg rounded-br-lg bg-gradient-to-l from-orange to-oranges xl:mx-10 xl:mt-1 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase"
+            class="inline-block rounded-tl-lg rounded-br-lg bg-highlight xl:mx-10 xl:mt-1 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase"
           >
             Book now
           </button>
@@ -169,12 +167,12 @@
               >
                 {{ article.title }}
               </p>
-              <p class="text-orange text-sm xl:mx-2">{{ article.introduction }}</p>
+              <p class="highlight text-sm xl:mx-2">{{ article.introduction }}</p>
               <p class="text-xs mx-1 text-white xl:mx-2 text-justify xl:mt-1">
                 {{ article.description }}
               </p>
               <button
-                class="flex justify-center xl:mb-2 xl:mx-auto bg-gradient-to-l from-orange to-oranges xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
+                class="flex justify-center xl:mb-2 xl:mx-auto bg-highlight xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
               >
                 Show
               </button>
@@ -193,7 +191,7 @@
             <img src="/images/logo.png " class="w-36 xl:mt-9 xl:mb-10" alt="" />
           </div>
           <div class="flex mx-auto flex-col xl:mt-12 upeprcase text-white">
-            <div><p class="text-orange text-sm font-regular">QUICK LINKS</p></div>
+            <div><p class="highlight text-sm font-regular">QUICK LINKS</p></div>
             <div>
               <p class="text-xs">
                 <RouterLink to="/legalnotice"> LEGAL NOTICE </RouterLink>
@@ -207,7 +205,7 @@
           </div>
 
           <div class="flex flex-col xl:mt-12 upeprcase text-white">
-            <div><p class="text-orange text-sm font-regular">FOLLOW Us</p></div>
+            <div><p class="highlight text-sm font-regular">FOLLOW Us</p></div>
             <div>
               <p class="text-xs">
                 TWITTER <br />
@@ -285,6 +283,7 @@ const articles = ref([
 const currPlanet = ref([]);
 const planetsStore = usePlanetStore();
 const planets = ref([]);
+const colors = ['orange', 'blue', 'gray'];
 
 onMounted(async () => {
   await planetsStore.getMercury();
@@ -297,10 +296,27 @@ onMounted(async () => {
 
 function changePlanet(planet) {
   currPlanet.value = planets.value.find((p) => p.p_id == planet.p_id);
+  document.querySelector(':root').style.setProperty('--color', 'blue');
 }
 </script>
 
-<style>
+<style lang="scss">
+:root {
+  --color: #ea580c;
+}
+
+.highlight {
+  color: var(--color);
+}
+
+.bg-highlight {
+  background-color: var(--color);
+}
+
+.border-highlight {
+  border-color: var(--color);
+}
+
 .card {
   transform: translate(-25%);
 }
