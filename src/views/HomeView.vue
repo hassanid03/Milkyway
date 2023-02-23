@@ -296,7 +296,7 @@ onMounted(async () => {
 
 function changePlanet(planet) {
   currPlanet.value = planets.value.find((p) => p.p_id == planet.p_id);
-  document.querySelector(':root').style.setProperty('--color', 'blue');
+  document.querySelector(':root').style.setProperty('--color', planet.color);
 }
 </script>
 
