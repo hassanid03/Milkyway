@@ -36,14 +36,14 @@
       </nav>
       <div class="box2 mt-32">
         <div class="flex justify-center mt-5" style="transform: translate(0.5%, -13%)">
-          <div class="flex justify-center">
+          <div v-for="(card, index) in currRouteVs" :key="index" class="flex justify-center mx-3">
             <div class=" ">
               <div
                 class="block mt-5 cardtrip rounded-tl-[15px] rounded-br-[15px] rounded-lg shadow-lg max-w-sm"
                 style="height: 500px; width: 300px"
               >
                 <img
-                  src="/images/trip1.jpg"
+                  :src="card.image"
                   class="object-cover object-center rounded-tl-[15px] rounded-br-[15px]"
                   alt=""
                   style="height: 500px; width: 300px"
@@ -53,52 +53,17 @@
                     class="text-white uppercase font-medium mx-3"
                     style="transform: translateY(-460%)"
                   >
-                    From
+                    {{ card.tag }}
                   </p>
                 </div>
                 <div
                   class="bg-gradient-to-l bgCh rounded-tl-[15px] rounded-br-[15px]"
                   style="transform: translateY(-128%)"
                 >
-                  <p class="text-white uppercase text-2xl p-2 mx-1 font-medium">Earth</p>
+                  <p class="text-white uppercase text-2xl p-2 mx-1 font-medium">{{ card.name }}</p>
                   <button
                     class="text-white text-sm pb-3 mt-1 flex mx-auto font-regular"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModalCenter"
-                  >
-                    Change
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex justify-center mx-7">
-            <div class=" ">
-              <div
-                class="block mt-5 cardtrip rounded-tl-[15px] rounded-br-[15px] rounded-lg shadow-lg max-w-sm"
-                style="height: 500px; width: 300px"
-              >
-                <img
-                  src="/images/trip2.jpg"
-                  class="object-cover object-right rounded-tl-[15px] rounded-br-[15px]"
-                  alt=""
-                  style="height: 500px; width: 300px"
-                />
-                <div>
-                  <p
-                    class="text-white uppercase font-medium mx-3"
-                    style="transform: translateY(-460%)"
-                  >
-                    To
-                  </p>
-                </div>
-                <div
-                  class="bg-gradient-to-l bgCh rounded-tl-[15px] rounded-br-[15px]"
-                  style="transform: translateY(-128%)"
-                >
-                  <p class="text-white uppercase text-2xl p-2 mx-1 font-medium">Mars</p>
-                  <button
-                    class="text-white text-sm pb-3 mt-1 flex mx-auto font-regular"
+                    @click="currCard = card.id"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModalCenter"
                   >
@@ -229,14 +194,14 @@
         <div
           class="modal-content border-none shadow-lg relative flex justify-around w-full pointer-events-auto bg-clip-padding rounded-md outline-none"
         >
-          <div class="">
+          <div v-for="(route, index) in routeOptions" :key="index" class="mx-2">
             <div class=" ">
               <div
                 class="block cardtrip rounded-tl-[15px] rounded-br-[15px] rounded-lg shadow-lg max-w-sm"
                 style="height: 500px; width: 300px"
               >
                 <img
-                  src="/images/trip2.jpg"
+                  :src="route.image"
                   class="object-cover object-right rounded-tl-[15px] rounded-br-[15px]"
                   alt=""
                   style="height: 500px; width: 300px"
@@ -246,68 +211,11 @@
                   class="bg-gradient-to-l bgCh rounded-tl-[15px] rounded-br-[15px]"
                   style="transform: translateY(-99%)"
                 >
-                  <p class="text-white uppercase text-2xl p-2 mx-1 font-medium">Earth</p>
+                  <p class="text-white uppercase text-2xl p-2 mx-1 font-medium">{{ route.name }}</p>
                   <button
                     class="text-white text-sm pb-3 mt-1 flex mx-auto font-regular"
                     data-bs-dismiss="modal"
-                  >
-                    Select
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mx-3">
-            <div class=" ">
-              <div
-                class="block cardtrip rounded-tl-[15px] rounded-br-[15px] rounded-lg shadow-lg max-w-sm"
-                style="height: 500px; width: 300px"
-              >
-                <img
-                  src="/images/trip1.jpg"
-                  class="object-cover object-center rounded-tl-[15px] rounded-br-[15px]"
-                  alt=""
-                  style="height: 500px; width: 300px"
-                />
-                <div></div>
-                <div
-                  class="bg-gradient-to-l bgCh rounded-tl-[15px] rounded-br-[15px]"
-                  style="transform: translateY(-99%)"
-                >
-                  <p class="text-white uppercase text-2xl p-2 mx-1 font-medium">Earth</p>
-                  <button
-                    class="text-white text-sm pb-3 mt-1 flex mx-auto font-regular"
-                    data-bs-dismiss="modal"
-                  >
-                    Select
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="">
-            <div class=" ">
-              <div
-                class="block bg-black cardtrip rounded-tl-[15px] rounded-br-[15px] rounded-lg shadow-lg max-w-sm"
-                style="height: 500px; width: 300px"
-              >
-                <img
-                  src="/images/moon.png"
-                  class="object-contain object-center rounded-tl-[15px] rounded-br-[15px]"
-                  alt=""
-                  style="height: 500px; width: 300px"
-                />
-                <div></div>
-                <div
-                  class="bg-gradient-to-l bgCh rounded-tl-[15px] rounded-br-[15px]"
-                  style="transform: translateY(-99%)"
-                >
-                  <p class="text-white uppercase text-2xl p-2 mx-1 font-medium">Earth</p>
-                  <button
-                    class="text-white text-sm pb-3 mt-1 flex mx-auto font-regular"
-                    data-bs-dismiss="modal"
+                    @click="changeCardOpt(route)"
                   >
                     Select
                   </button>
@@ -377,6 +285,45 @@ const formatter = ref({
 let showC = ref(false);
 let showS = ref(false);
 let selected = ref(null);
+const currCard = ref();
+
+const changeCardOpt = (obj) => {
+  currRouteVs.value[currCard.value - 1].image = obj.image;
+  currRouteVs.value[currCard.value - 1].name = obj.name;
+};
+
+const routeOptions = ref([
+  {
+    id: 1,
+    image: '/images/trip1.jpg',
+    name: 'Earth',
+  },
+  {
+    id: 2,
+    image: '/images/trip2.jpg',
+    name: 'Mars',
+  },
+  {
+    id: 3,
+    image: '/images/moon.png',
+    name: 'Moon',
+  },
+]);
+
+const currRouteVs = ref([
+  {
+    id: 1,
+    image: '/images/trip1.jpg',
+    name: 'Earth',
+    tag: 'From',
+  },
+  {
+    id: 2,
+    image: '/images/trip2.jpg',
+    name: 'Mars',
+    tag: 'To',
+  },
+]);
 </script>
 
 <style>
