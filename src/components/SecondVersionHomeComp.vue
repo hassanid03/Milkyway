@@ -75,15 +75,13 @@
             <p>only 3.000.00$</p>
           </div>
           <div>
-            <p class="text-justify text-white" style="margin-left: 2.5rem; margin-right: -3rem">
+            <p class="text-justify text-white" style="margin-left: 2.5rem; margin-right: 2rem">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
               invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
               accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
               sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
               sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-              aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-              rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-              amet.
+              aliquyam erat, sed diam voluptua.
             </p>
           </div>
           <div class="flex xl:mt-3 bg-opacity-75" style="margin-left: 19rem; margin-right: 2rem">
@@ -287,6 +285,8 @@
 </template>
 
 <script setup>
+import CounterCopm from './CounterCopm.vue';
+
 import { ref } from 'vue';
 import Home from '../views/HomeView.vue';
 let show = ref(false);

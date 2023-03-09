@@ -34,7 +34,7 @@
           </div>
         </div>
       </nav>
-      <div class="box2 mt-16">
+      <div class="box2 mt-32">
         <div class="flex justify-center mt-5" style="transform: translate(0.5%, -13%)">
           <div class="flex justify-center">
             <div class=" ">
@@ -61,7 +61,11 @@
                   style="transform: translateY(-128%)"
                 >
                   <p class="text-white uppercase text-2xl p-2 mx-1 font-medium">Earth</p>
-                  <button class="text-white text-sm pb-3 mt-1 flex mx-auto font-regular">
+                  <button
+                    class="text-white text-sm pb-3 mt-1 flex mx-auto font-regular"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModalCenter"
+                  >
                     Change
                   </button>
                 </div>
@@ -93,7 +97,11 @@
                   style="transform: translateY(-128%)"
                 >
                   <p class="text-white uppercase text-2xl p-2 mx-1 font-medium">Mars</p>
-                  <button class="text-white text-sm pb-3 mt-1 flex mx-auto font-regular">
+                  <button
+                    class="text-white text-sm pb-3 mt-1 flex mx-auto font-regular"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModalCenter"
+                  >
                     Change
                   </button>
                 </div>
@@ -126,7 +134,11 @@
                   style="transform: translateY(-128%)"
                 >
                   <p class="text-white uppercase text-2xl p-2 mx-1 font-medium">business</p>
-                  <button class="text-white text-sm pb-3 mt-1 flex mx-auto font-regular">
+                  <button
+                    class="text-white text-sm pb-3 mt-1 flex mx-auto font-regular"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModalCenter"
+                  >
                     Change
                   </button>
                 </div>
@@ -180,7 +192,6 @@
                   v-model="selected"
                   class="font-medium capitalize text-black bg-oranges h-7 rounded-[5px] bordner-none"
                 >
-
                   <option :value="null">number of seats</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -205,8 +216,110 @@
         </div>
       </div>
     </div>
+    <!-- Modal Begin -->
+    <div
+      class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+      id="exampleModalCenter"
+      tabindex="-1"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-dialog-centered relative w-auto pointer-events-none">
+        <div
+          class="modal-content border-none shadow-lg relative flex justify-around w-full pointer-events-auto bg-clip-padding rounded-md outline-none"
+        >
+          <div class="">
+            <div class=" ">
+              <div
+                class="block cardtrip rounded-tl-[15px] rounded-br-[15px] rounded-lg shadow-lg max-w-sm"
+                style="height: 500px; width: 300px"
+              >
+                <img
+                  src="/images/trip2.jpg"
+                  class="object-cover object-right rounded-tl-[15px] rounded-br-[15px]"
+                  alt=""
+                  style="height: 500px; width: 300px"
+                />
+                <div></div>
+                <div
+                  class="bg-gradient-to-l bgCh rounded-tl-[15px] rounded-br-[15px]"
+                  style="transform: translateY(-99%)"
+                >
+                  <p class="text-white uppercase text-2xl p-2 mx-1 font-medium">Earth</p>
+                  <button
+                    class="text-white text-sm pb-3 mt-1 flex mx-auto font-regular"
+                    data-bs-dismiss="modal"
+                  >
+                    Select
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <div class="mt-96">
+          <div class="mx-3">
+            <div class=" ">
+              <div
+                class="block cardtrip rounded-tl-[15px] rounded-br-[15px] rounded-lg shadow-lg max-w-sm"
+                style="height: 500px; width: 300px"
+              >
+                <img
+                  src="/images/trip1.jpg"
+                  class="object-cover object-center rounded-tl-[15px] rounded-br-[15px]"
+                  alt=""
+                  style="height: 500px; width: 300px"
+                />
+                <div></div>
+                <div
+                  class="bg-gradient-to-l bgCh rounded-tl-[15px] rounded-br-[15px]"
+                  style="transform: translateY(-99%)"
+                >
+                  <p class="text-white uppercase text-2xl p-2 mx-1 font-medium">Earth</p>
+                  <button
+                    class="text-white text-sm pb-3 mt-1 flex mx-auto font-regular"
+                    data-bs-dismiss="modal"
+                  >
+                    Select
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="">
+            <div class=" ">
+              <div
+                class="block bg-black cardtrip rounded-tl-[15px] rounded-br-[15px] rounded-lg shadow-lg max-w-sm"
+                style="height: 500px; width: 300px"
+              >
+                <img
+                  src="/images/moon.png"
+                  class="object-contain object-center rounded-tl-[15px] rounded-br-[15px]"
+                  alt=""
+                  style="height: 500px; width: 300px"
+                />
+                <div></div>
+                <div
+                  class="bg-gradient-to-l bgCh rounded-tl-[15px] rounded-br-[15px]"
+                  style="transform: translateY(-99%)"
+                >
+                  <p class="text-white uppercase text-2xl p-2 mx-1 font-medium">Earth</p>
+                  <button
+                    class="text-white text-sm pb-3 mt-1 flex mx-auto font-regular"
+                    data-bs-dismiss="modal"
+                  >
+                    Select
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="" style="margin-top: 440px">
       <div class="bgFooter uppercase">
         <div class="flex justify-center mx-64">
           <div class="">

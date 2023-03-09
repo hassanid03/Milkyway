@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-transparent" style="background-image: linear-gradient(#27262d, #56555a, #394d53)">
+  <div class="" style="background-image: linear-gradient(#27262d, #56555a, #394d53); height; 100%">
     <!--Header-->
     <div class="bgPageImp">
       <nav class="sm:px-4 py-2.5 text-white md:text-xs md:font-regular container">

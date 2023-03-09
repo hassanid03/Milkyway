@@ -4,8 +4,7 @@
     <div class="bgPage1">
       <!-- navbar begin -->
       <nav class="sm:px-4 py-2.5 text-white md:text-xs md:font-regular">
-        <div class="container flex flex-wrap justify-between items-center mx-7">
-          <div class="md:order-2">SHOP</div>
+        <div class="flex flex-wrap justify-center items-center mx-7">
           <div
             active
             class="flex flex-col p-4 mt-4 rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:border-0"
@@ -34,6 +33,9 @@
               TRIPS
             </RouterLink>
           </div>
+          <RouterLink to="/shop">
+            <div class="">SHOP</div>
+          </RouterLink>
         </div>
       </nav>
       <!-- navbar end -->

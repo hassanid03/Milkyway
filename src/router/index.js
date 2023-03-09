@@ -4,6 +4,7 @@ import Goals from '../views/GoalsView.vue';
 import Careers from '../views/CareersView.vue';
 import Trips from '../views/TripsView.vue';
 import LegalNotice from '../views/LegalNotice.vue';
+import shop from '../views/ShopView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/legalnotice',
       name: 'Legal Notice',
       component: LegalNotice,
+    },
+    {
+      path: '/shop',
+      name: 'shop',
+      component: shop,
     },
   ],
 });
