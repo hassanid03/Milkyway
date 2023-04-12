@@ -9,15 +9,15 @@ export const usePlanetStore = defineStore('planets', {
   }),
   actions: {
     async getMercury() {
-      const { data } = await axios.get('/milkyway/planets/1');
+      const { data } = await axios.get('https://milkyway-5x5i.onrender.com/milkyway/planets/1');
       this.mercury = data;
     },
     async getEarth() {
-      const { data } = await axios.get('/milkyway/planets/2');
+      const { data } = await axios.get('https://milkyway-5x5i.onrender.com/milkyway/planets/2');
       this.earth = data;
     },
     async getPlanets() {
-      const { data } = await axios.get('/milkyway/planets');
+      const { data } = await axios.get('https://milkyway-5x5i.onrender.com/milkyway/planets');
       this.planets = data;
     },
   },
