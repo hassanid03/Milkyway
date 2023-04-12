@@ -33,43 +33,40 @@
           </div>
         </div>
       </nav>
-      <div class="mx-11 p-4">
+      <div class="xl:mx-11 p-4">
         <div>
           <div>
             <p class="font-black text-3xl text-white text-center">OUR GOALS</p>
           </div>
 
           <!-- <p class="text-white text-4xl uppercase">Goals</p> -->
-          <div class="mt-7 px-6 mx-auto">
+          <div class="mt-7 xl:px-6 xl:mx-auto">
             <!-- Section: Design Block -->
             <section class="mb-32 text-white text-center">
               <div class="grid mt-16 md:grid-cols-2 gap-x-6 xl:gap-x-12 items-center mb-12">
                 <div class="mb-6 md:mb-0">
-                  <div class="relative" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                  <div class="relative">
                     <img
                       src="/images/mars.png"
-                      class="rounded-[15px] flex justify-center mx-auto p-1"
+                      class="rounded-[15px] flex justify-center mx-auto p-1 xl:w-96 w-64"
                       alt="Louvre"
-                      style="
-                        width: 380px;
-                        filter: drop-shadow(0rem 2.5rem 0.5rem rgba(0, 0, 0, 0.5));
-                      "
+                      style="filter: drop-shadow(0rem 2.5rem 0.5rem rgba(0, 0, 0, 0.5))"
                     />
                   </div>
                 </div>
 
-                <div class="mb-6 md:mb-0">
-                  <h3 class="text-2xl font-bold mb-3">
+                <div class="mb-6">
+                  <p class="xl:text-2xl font-bold mb-3">
                     Establishing a Permanent Human <br />
                     Presence on Mars
-                  </h3>
+                  </p>
                   <div class="mb-3 text-red-600 font-medium text-sm flex justify-center">
                     <img src="/images/goal1.png" style="width: 38px; height: 38px" alt="" />
                   </div>
                   <p class="text-white mb-2">
                     <small>First Goal: </small>
                   </p>
-                  <p class="text-white capitalize">
+                  <p class="text-white font-medium capitalize text-justify">
                     One of the primary goals of our company is to send humans to Mars and establish
                     a permanent colony. We aim to develop the necessary technologies,
                     infrastructure, and resources to sustain human life on the Red Planet. This goal
@@ -81,15 +78,12 @@
 
               <div class="grid md:grid-cols-2 gap-x-6 xl:gap-x-12 items-center mb-12">
                 <div class="mb-6 md:mb-0 md:order-2">
-                  <div class="relative" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                  <div class="relative">
                     <img
                       src="/images/earth.png"
-                      class="rounded-[15px] flex justify-center mx-auto p-1"
+                      class="rounded-[15px] flex justify-center mx-auto p-1 xl:w-96 w-64"
                       alt="Louvre"
-                      style="
-                        width: 380px;
-                        filter: drop-shadow(0rem 2.5rem 0.5rem rgba(0, 0, 0, 0.5));
-                      "
+                      style="filter: drop-shadow(0rem 2.5rem 0.5rem rgba(0, 0, 0, 0.5))"
                     />
                   </div>
                 </div>
@@ -107,7 +101,7 @@
                   <p class="text-white mb-2">
                     <small>Second Goal: </small>
                   </p>
-                  <p class="text-white capitalize">
+                  <p class="text-white capitalize font-medium text-justify">
                     In order to make spaceflight more affordable and accessible, our company plans
                     to develop reusable spacecraft. We aim to create vehicles that can travel to
                     space and back multiple times without significant maintenance or repairs. This
@@ -119,13 +113,12 @@
 
               <div class="grid md:grid-cols-2 gap-x-6 xl:gap-x-12 items-center mb-12">
                 <div class="mb-6 md:mb-0">
-                  <div class="relative" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                  <div class="relative">
                     <img
                       src="/images/mercury.png"
-                      class="rounded-[15px] flex justify-center mx-auto p-1"
+                      class="rounded-[15px] flex justify-center mx-auto p-1 xl:w-2/3 w-72"
                       alt="Louvre"
                       style="
-                        width: 440px;
                         filter: drop-shadow(0rem 2.5rem 0.5rem rgba(0, 0, 0, 0.5));
                       "
                     />
@@ -145,7 +138,7 @@
                   <p class="text-white mb-2">
                     <small>Third Goal: </small>
                   </p>
-                  <p class="text-white capitalize">
+                  <p class="text-white capitalize font-medium text-justify">
                     Our company aims to develop high-speed transportation systems that can take
                     people from one continent to another in a matter of hours. We plan to use
                     advanced aerospace technologies to create hypersonic passenger aircraft that can
@@ -170,7 +163,7 @@
           <div class="flex mx-auto p-2 flex-col xl:mt-12 upeprcase text-white">
             <div><p class="text-orange text-sm font-regular">QUICK LINKS</p></div>
             <div>
-              <p class="text-xs">
+              <p class="text-xs font-medium">
                 LEGAL NOTICE <br />
                 TRIPS <br />
                 STORE <br />
@@ -183,7 +176,7 @@
           <div class="flex mx-2 p-2 flex-col xl:mt-12 upeprcase text-white">
             <div><p class="text-orange text-sm font-regular">FOLLOW Us</p></div>
             <div>
-              <p class="text-xs">
+              <p class="text-xs font-medium">
                 TWITTER <br />
                 INSTAGRAM <br />
                 FACEBOOK <br />
@@ -196,7 +189,7 @@
     </div>
 
     <div class="">
-      <div class="bg-black uppercase">
+      <div class="bg-black uppercase font-medium ">
         <div class="flex justify-center">
           <p class="text-white text-xs xl:mt-4 xl:mb-4">
             Danial H. - Daniel D. - Lukas H. - Raphael L.
@@ -211,7 +204,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 .bgPageImp {
   height: 950px;
   isolation: isolate;

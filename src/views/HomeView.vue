@@ -92,7 +92,7 @@
             <p>{{ currPlanet.price_per_day }}$ per day</p>
           </div>
           <div class="">
-            <p class="text-white text-justify xl:mx-10">
+            <p class="text-white text-justify xl:mx-10 font-medium">
               {{ currPlanet.description }}
             </p>
           </div>
@@ -128,20 +128,16 @@
             Book now
           </button>
         </div>
+        <div class="flex items-center">
+          <img
+            :src="`/images/${currPlanet.img}`"
+            class="xl:mt-8 ani mr-56"
+            alt="Earth"
+            style="width: 300px; filter: drop-shadow(0rem 2.5rem 0.5rem rgba(0, 0, 0, 0.5))"
+          />
+        </div>
       </div>
       <!-- Bild von Karte begin -->
-      <div class="">
-        <img
-          :src="`/images/${currPlanet.img}`"
-          class="xl:mt-8 ani mr-56"
-          alt="Earth"
-          style="
-            width: 300px;
-            filter: drop-shadow(0rem 2.5rem 0.5rem rgba(0, 0, 0, 0.5));
-            transform: translate(-7%, 35%);
-          "
-        />
-      </div>
 
       <!-- Bild von Karte end -->
     </div>
