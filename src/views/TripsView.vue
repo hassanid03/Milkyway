@@ -3,7 +3,9 @@
     <div class="bgPage1 mb-20">
       <nav class="sm:px-4 py-2.5 text-white md:text-xs md:font-regular">
         <div class="container flex flex-wrap justify-between items-center mx-7">
-          <div class="md:order-2">SHOP</div>
+          <RouterLink class="md:order-2" to="/shop">
+            <div>SHOP</div>
+          </RouterLink>
           <div
             active
             class="flex flex-col p-4 mt-4 rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:border-0"
@@ -20,10 +22,10 @@
               GOALS
             </RouterLink>
             <RouterLink
-              to="/careers"
+              to="/legalnotice"
               active-class="block text-orange py-2 pr-4 pl-3 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
             >
-              CAREERS
+              CONTACT
             </RouterLink>
             <RouterLink
               to="/trips"
@@ -43,11 +45,29 @@
                 style="height: 500px; width: 300px"
               >
                 <img
+                  v-if="card.name == 'Earth'"
                   :src="card.image"
-                  class="object-cover object-center rounded-tl-[15px] rounded-br-[15px]"
+                  class="object-cover rounded-tl-[15px] rounded-br-[15px]"
                   alt=""
                   style="height: 500px; width: 300px"
                 />
+
+                <img
+                  v-if="card.name == 'Mars'"
+                  :src="card.image"
+                  class="object-cover object-right rounded-tl-[15px] rounded-br-[15px]"
+                  alt=""
+                  style="height: 500px; width: 300px"
+                />
+
+                <img
+                  v-if="card.name == 'Moon'"
+                  :src="card.image"
+                  class="object-cover rounded-tl-[15px] rounded-br-[15px]"
+                  alt=""
+                  style="height: 500px; width: 300px"
+                />
+
                 <div>
                   <p
                     class="text-white uppercase font-medium mx-3"
@@ -169,7 +189,19 @@
             </div>
             <div class="">
               <p class="text-orange line-through uppercase text-md font-regular">49,999.99$ -50%</p>
-              <p class="text-white uppercase text-4xl font-regular">24,999.99$</p>
+              <p
+                v-if="selected != 2 && selected != 3"
+                class="text-white uppercase text-4xl font-regular"
+              >
+                24,999.99$
+              </p>
+              <p v-if="selected == 2" class="text-white uppercase text-4xl font-regular">
+                30,999.99$
+              </p>
+              <p v-if="selected == 3" class="text-white uppercase text-4xl font-regular">
+                37,999.99$
+              </p>
+
               <button
                 class="text-4xl bgCh2 text-white font-regular"
                 style="transform: translate(-9%, 40%)"
@@ -201,8 +233,25 @@
                 style="height: 500px; width: 300px"
               >
                 <img
+                  v-if="route.id == 1"
+                  :src="route.image"
+                  class="object-cover rounded-tl-[15px] rounded-br-[15px]"
+                  alt=""
+                  style="height: 500px; width: 300px"
+                />
+
+                <img
+                  v-if="route.id != 3 && route.id != 1"
                   :src="route.image"
                   class="object-cover object-right rounded-tl-[15px] rounded-br-[15px]"
+                  alt=""
+                  style="height: 500px; width: 300px"
+                />
+
+                <img
+                  v-if="route.id == 3"
+                  :src="route.image"
+                  class="object-cover rounded-tl-[15px] rounded-br-[15px]"
                   alt=""
                   style="height: 500px; width: 300px"
                 />
@@ -305,7 +354,7 @@ const routeOptions = ref([
   },
   {
     id: 3,
-    image: '/images/moon.png',
+    image: '/images/tripMoon.jpg',
     name: 'Moon',
   },
 ]);
@@ -326,7 +375,7 @@ const currRouteVs = ref([
 ]);
 </script>
 
-<style>
+<style scoped>
 .box2 {
   isolation: isolate;
   position: relative;

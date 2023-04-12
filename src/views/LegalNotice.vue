@@ -2,9 +2,11 @@
   <div class="" style="background-image: linear-gradient(#27262d, #56555a, #394d53); height; 100%">
     <!--Header-->
     <div class="bgPageImp">
-      <nav class="sm:px-4 py-2.5 text-white md:text-xs md:font-regular container">
-        <div class="flex flex-wrap justify-between items-center mx-7">
-          <div class="md:order-2">SHOP</div>
+      <nav class="sm:px-4 py-2.5 text-white md:text-xs md:font-regular">
+        <div class="container flex flex-wrap justify-between items-center mx-7">
+          <RouterLink class="md:order-2" to="/shop">
+            <div>SHOP</div>
+          </RouterLink>
           <div
             active
             class="flex flex-col p-4 mt-4 rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:border-0"
@@ -21,14 +23,14 @@
               GOALS
             </RouterLink>
             <RouterLink
-              to="/careers"
+              to="/legalnotice"
               active-class="block text-orange py-2 pr-4 pl-3 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
             >
-              CAREERS
+              CONTACT
             </RouterLink>
             <RouterLink
               to="/trips"
-              active-class="block text-orange py-2 pr-4 pl-3 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+              active-class="block text-orange underline focus:underline py-2 pr-4 pl-3 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
             >
               TRIPS
             </RouterLink>
@@ -74,7 +76,7 @@
                 75008 Mμster-Σst Parys MyWy-113
               </p>
             </div>
-            <div class="ml-28" style="margin-top: 162px; margin-right: 490px">
+            <div class="ml-52" style="margin-top: 162px; margin-right: 240px">
               <div class="w-96" style="width: 530px">
                 <p class="text-white text-lg">Object: Space Travel</p>
                 <p class="text-white text-lg">UID-Number: PYU124869078</p>

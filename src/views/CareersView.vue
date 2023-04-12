@@ -2,7 +2,17 @@
   <div style="background-image: linear-gradient(#27262d, #56555a, #394d53)">
     <div class="bgPage1">
       <NavbarComp></NavbarComp>
-      <div class="text-white text-3xl font-black mt-10 mb-3 text-center">Nothing Here</div>
+      <div>
+        <h2>Items to Buy</h2>
+        <ul>
+          <li v-for="item in items" :key="item.id">
+            {{ item.name }}
+            <button @click="addItemToCart(item)">Buy</button>
+          </li>
+        </ul>
+        <h2>Shopping Cart</h2>
+        <p>Number of items: {{ cart.length }}</p>
+      </div>
     </div>
     <div class="mt-96">
       <div class="bgFooter uppercase">
@@ -52,6 +62,26 @@
 
 <script setup>
 import NavbarComp from '@/components/NavbarComp.vue';
+</script>
+
+<script>
+export default {
+  data() {
+    return {
+      items: [
+        { id: 1, name: 'Apple' },
+        { id: 2, name: 'Banana' },
+        { id: 3, name: 'Orange' },
+      ],
+      cart: [],
+    };
+  },
+  methods: {
+    addItemToCart(item) {
+      this.cart.push(item);
+    },
+  },
+};
 </script>
 
 <style></style>

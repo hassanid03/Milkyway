@@ -4,38 +4,38 @@
     <div class="bgPage1">
       <!-- navbar begin -->
       <nav class="sm:px-4 py-2.5 text-white md:text-xs md:font-regular">
-        <div class="flex flex-wrap justify-center items-center mx-7">
+        <div class="container flex flex-wrap justify-between items-center mx-7">
+          <RouterLink class="md:order-2" to="/shop">
+            <div>SHOP</div>
+          </RouterLink>
           <div
             active
             class="flex flex-col p-4 mt-4 rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:border-0"
           >
             <RouterLink
               to="/"
-              active-class="block highlight underline py-2 pr-4 pl-3 rounded md:bg-transparent md:text-blue-700 md:p-0"
+              active-class="block text-orange underline py-2 pr-4 pl-3 rounded md:bg-transparent md:text-blue-700 md:p-0"
               >HOME
             </RouterLink>
             <RouterLink
               to="/goals"
-              active-class="block highlight py-2 pr-4 pl-3 rounded md:hover:bg-transparent underline focus:underline md:hover:text-blue-700 md:p-0"
+              active-class="block text-orange py-2 pr-4 pl-3 rounded md:hover:bg-transparent underline focus:underline md:hover:text-blue-700 md:p-0"
             >
               GOALS
             </RouterLink>
             <RouterLink
-              to="/careers"
-              active-class="block highlight py-2 pr-4 pl-3 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+              to="/legalnotice"
+              active-class="block text-orange py-2 pr-4 pl-3 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
             >
-              CAREERS
+              CONTACT
             </RouterLink>
             <RouterLink
               to="/trips"
-              active-class="block highlight py-2 pr-4 pl-3 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+              active-class="block text-orange underline focus:underline py-2 pr-4 pl-3 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
             >
               TRIPS
             </RouterLink>
           </div>
-          <RouterLink to="/shop">
-            <div class="">SHOP</div>
-          </RouterLink>
         </div>
       </nav>
       <!-- navbar end -->
@@ -80,7 +80,7 @@
     <!--Section 1 End-->
     <!--Section 2-->
     <div
-      class="flex box1 h-auto rounded-tl-[15px] rounded-br-[15px]"
+      class="flex box1 h-auto mt-72 rounded-tl-[15px] rounded-br-[15px]"
       style="transform: translateY(-20%)"
     >
       <div class="flex xl:mt-5 justify-center">
@@ -91,8 +91,8 @@
           <div class="uppercase highlight xl:text-sm font-regular xl:mx-10">
             <p>{{ currPlanet.price_per_day }}$ per day</p>
           </div>
-          <div>
-            <p class="text-justify text-white" style="margin-left: 2.5rem; margin-right: -3rem">
+          <div class="">
+            <p class="text-white text-justify xl:mx-10">
               {{ currPlanet.description }}
             </p>
           </div>
@@ -130,19 +130,19 @@
         </div>
       </div>
       <!-- Bild von Karte begin -->
-      <div>
+      <div class="">
         <img
           :src="`/images/${currPlanet.img}`"
-          class="xl:mt-8 ani"
+          class="xl:mt-8 ani mr-56"
           alt="Earth"
           style="
-            width: 320px;
-            margin-left: 0.1rem;
-            margin-right: 20rem;
+            width: 300px;
             filter: drop-shadow(0rem 2.5rem 0.5rem rgba(0, 0, 0, 0.5));
+            transform: translate(-7%, 35%);
           "
         />
       </div>
+
       <!-- Bild von Karte end -->
     </div>
     <!-- Karte in der Mitte mit Text und Planet end -->
@@ -150,34 +150,36 @@
     <!-- News und Karten begin -->
     <div class="">
       <p class="text-white uppercase xl:mx-80 xl:text-4xl" style="">News</p>
-      <div class="flex overflow-y-auto pb-10 no-scrollbar relative" style="">
+      <div class="flex overflow-x-auto pb-10 no-scrollbar justify-center relative" style="">
         <div class="flex flex-nowrap">
           <div class="flex mt-4 relative mx-2">
             <div
               v-for="(article, index) in articles"
               :key="index"
-              class="w-96 mr-6 rounded-tl-[15px] rounded-br-[15px]"
+              class="w-96 relative mr-6 rounded-tl-[15px] rounded-br-[15px]"
               style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
             >
               <img
-                :src="`/images/${article.image}`"
+                :src="`http://localhost:3000/${article.img}`"
                 class="rounded-tl-[10px] rounded-br-[10px]"
                 alt=""
+                crossorigin="anonymous"
               />
               <p
                 class="mt-2 font-regular xl:mx-2 text-2xl uppercase tracking-tight text-gray-900 dark:text-white"
               >
                 {{ article.title }}
               </p>
-              <p class="highlight text-sm xl:mx-2">{{ article.introduction }}</p>
               <p class="text-xs mx-1 text-white xl:mx-2 text-justify xl:mt-1">
-                {{ article.description }}
+                {{ article.summary }}
               </p>
-              <button
-                class="flex justify-center xl:mb-2 xl:mx-auto bg-highlight xl:mt-2 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
-              >
-                Show
-              </button>
+              <div>
+                <button
+                  class="flex absolute inset-x-0 bottom-0 justify-center xl:mb-2 xl:mx-auto bg-highlight xl:mt-4 xl:w-36 xl:font-medium px-6 py-2.5 text-white font-medium text-xs uppercase rounded-tl-[10px] rounded-br-[10px]"
+                >
+                  Show
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -244,57 +246,34 @@ import CounterCopm from '../components/CounterCopm.vue';
 import Second from '../components/SecondVersionHomeComp.vue';
 import { ref, onMounted } from 'vue';
 import { usePlanetStore } from '../stores/planets.js';
+import { useArticleStore } from '@/stores/articles.js';
+const articleStore = useArticleStore();
+const articles = ref([]);
+
 let show = ref(false);
-const articles = ref([
-  {
-    title: 'MyWy-113 ti',
-    introduction: 'The new MyWy-113 ti makes space-trips into space naps!',
-    description:
-      'Faster, comfier and cheaper. Our new night-jet class rocket offers way more than just a new design and more pillows (and blankets too!). An engine stronger than the atmosphere a red giant bears. Spacier than one of our mid-class hotels and better food served than you can ever dream of at home. And yes we have classified mommy star cooks for you on board. Starting with our new spring season, MyWy-113 ti will journey across the bright and starry universe we know together with you and our amazing team. Not me though.',
-    image: '3.jpg',
-  },
-  {
-    title: 'MyWy-113 ti',
-    introduction: 'The new MyWy-113 ti makes space-trips into space naps!',
-    description:
-      'Faster, comfier and cheaper. Our new night-jet class rocket offers way more than just a new design and more pillows (and blankets too!). An engine stronger than the atmosphere a red giant bears. Spacier than one of our mid-class hotels and better food served than you can ever dream of at home. And yes we have classified mommy star cooks for you on board. Starting with our new spring season, MyWy-113 ti will journey across the bright and starry universe we know together with you and our amazing team. Not me though.',
-    image: '3.jpg',
-  },
-  {
-    title: 'MyWy-113 ti',
-    introduction: 'The new MyWy-113 ti makes space-trips into space naps!',
-    description:
-      'Faster, comfier and cheaper. Our new night-jet class rocket offers way more than just a new design and more pillows (and blankets too!). An engine stronger than the atmosphere a red giant bears. Spacier than one of our mid-class hotels and better food served than you can ever dream of at home. And yes we have classified mommy star cooks for you on board. Starting with our new spring season, MyWy-113 ti will journey across the bright and starry universe we know together with you and our amazing team. Not me though.',
-    image: '3.jpg',
-  },
-  {
-    title: 'MyWy-113 ti',
-    introduction: 'The new MyWy-113 ti makes space-trips into space naps!',
-    description:
-      'Faster, comfier and cheaper. Our new night-jet class rocket offers way more than just a new design and more pillows (and blankets too!). An engine stronger than the atmosphere a red giant bears. Spacier than one of our mid-class hotels and better food served than you can ever dream of at home. And yes we have classified mommy star cooks for you on board. Starting with our new spring season, MyWy-113 ti will journey across the bright and starry universe we know together with you and our amazing team. Not me though.',
-    image: '3.jpg',
-  },
-  {
-    title: 'MyWy-113 ti',
-    introduction: 'The new MyWy-113 ti makes space-trips into space naps!',
-    description:
-      'Faster, comfier and cheaper. Our new night-jet class rocket offers way more than just a new design and more pillows (and blankets too!). An engine stronger than the atmosphere a red giant bears. Spacier than one of our mid-class hotels and better food served than you can ever dream of at home. And yes we have classified mommy star cooks for you on board. Starting with our new spring season, MyWy-113 ti will journey across the bright and starry universe we know together with you and our amazing team. Not me though.',
-    image: '3.jpg',
-  },
-]);
 const currPlanet = ref([]);
 const planetsStore = usePlanetStore();
 const planets = ref([]);
-const colors = ['orange', 'blue', 'gray'];
+const colors = ['orange', 'blue', 'white'];
 
 onMounted(async () => {
   await planetsStore.getMercury();
   await planetsStore.getEarth();
   await planetsStore.getPlanets();
+  await articleStore.getArticle();
   planets.value = planetsStore.planets;
   currPlanet.value = planetsStore.planets[0];
   console.log(currPlanet.value);
+
+  articles.value = articleStore.article;
+  console.log(articles.value);
 });
+
+// onMounted(async () => {
+//   await planetsStore.getArticles();
+//   articles.value = planetsStore.articles;
+//   console.log(articles.value);
+// });
 
 function changePlanet(planet) {
   currPlanet.value = planets.value.find((p) => p.p_id == planet.p_id);
@@ -349,7 +328,6 @@ function changePlanet(planet) {
   background-size: cover;
 }
 .bgPage1 {
-  height: 700px;
   isolation: isolate;
   position: relative;
 }
@@ -487,7 +465,7 @@ function changePlanet(planet) {
 }
 .box1::after {
   content: '';
-  position: absolute;
+  position: fixed;
   z-index: -1;
   inset: 0;
   background: radial-gradient(#27262d, #27262d, #6e6e72);
