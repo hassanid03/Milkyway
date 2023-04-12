@@ -156,7 +156,7 @@
               style="background-image: radial-gradient(#27262d, #27262d, #6e6e72); height: 490px"
             >
               <img
-                :src="`http://localhost:3000/${article.img}`"
+                :src="`/${article.img}`"
                 class="rounded-tl-[10px] rounded-br-[10px]"
                 alt=""
                 crossorigin="anonymous"
