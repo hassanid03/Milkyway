@@ -323,7 +323,34 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import { usePlanetStore } from '../stores/planets.js';
+
+const planetsStore = usePlanetStore();
+const planets = ref([]);
+
+const currRouteVs = ref([]);
+
+onMounted(async () => {
+  await planetsStore.getPlanets();
+  planets.value = planetsStore.planets;
+  const earth = planets.value.find((el) => el.name == 'Earth');
+  const mars = planets.value.find((el) => el.name == 'Mars');
+  currRouteVs.value = [
+    {
+      id: 1,
+      image: '/images/trip1.jpg',
+      name: 'Earth',
+      tag: 'From',
+    },
+    {
+      id: 2,
+      image: '/images/trip2.jpg',
+      name: 'Mars',
+      tag: 'To',
+    },
+  ];
+});
 
 const dateValue = ref([]);
 const formatter = ref({
@@ -359,20 +386,7 @@ const routeOptions = ref([
   },
 ]);
 
-const currRouteVs = ref([
-  {
-    id: 1,
-    image: '/images/trip1.jpg',
-    name: 'Earth',
-    tag: 'From',
-  },
-  {
-    id: 2,
-    image: '/images/trip2.jpg',
-    name: 'Mars',
-    tag: 'To',
-  },
-]);
+
 </script>
 
 <style scoped>
