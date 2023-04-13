@@ -6,7 +6,7 @@ export const useArticleStore = defineStore('article', {
   getters: {},
   actions: {
     async getArticle() {
-      const { data } = await axios.get('/milkyway/articles');
+      const { data } = await axios.get('http://localhost:3000/milkyway/articles');
       console.log(data);
       this.article = data;
     },
